@@ -7,6 +7,7 @@ import About from './containers/client/About/About';
 import MovieDetail from './containers/client/MovieDetail/MovieDetail';
 import PageNotFound from './containers/shared/PageNotFound/PageNotFound';
 import Header from './components/Header/Header';
+import Footer from 'components/Footer/Footer';
 
 
 function App() {
@@ -19,9 +20,10 @@ function App() {
           <Route path="/theater" component={Theater} />
           <Route path="/review" component={Review} />
           <Route path="/about" component={About} />
-          <Route path="/movie-detail/:id" component={MovieDetail} />
+          <Route path="/movie-detail/:movieId" component={MovieDetail} />
           <Route path="*" component={PageNotFound} />
         </Switch>
+        <Footer />
       </Router>
     </div>
   )
