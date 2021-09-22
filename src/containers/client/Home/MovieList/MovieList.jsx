@@ -9,9 +9,9 @@ class MovieList extends Component {
         this.props.fetchAllMovie();
     }
     render() {
-        const { listMovie, isLaoding } = this.props;
+        const { listMovie, isLoading } = this.props;
         
-        if (isLaoding) {
+        if (isLoading) {
             return (
                 <div className="loader"></div>
             )
@@ -48,10 +48,9 @@ class MovieList extends Component {
 
 const mapStateToProps = (state) => ({
     listMovie: state.homeReducers.listMovie,
-    isLaoding: state.homeReducers.isLaoding,
+    isLoading: state.homeReducers.isLoading,
 })
 const mapDispatchToProps = dispatch => ({
     fetchAllMovie: () => dispatch(actFetchAllMovieApi())
 })
-
 export default connect(mapStateToProps, mapDispatchToProps)(MovieList);

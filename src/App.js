@@ -4,10 +4,11 @@ import Home from './containers/client/Home/Home';
 import Theater from './containers/client/Theater/Theater';
 import Review from './containers/client/Review/Review';
 import About from './containers/client/About/About';
-import MovieDetail from './containers/client/MovieDetail/MovieDetail';
+
 import PageNotFound from './containers/shared/PageNotFound/PageNotFound';
 import Header from './components/Header/Header';
 import Footer from 'components/Footer/Footer';
+import MovieDetail from 'containers/client/MovieDetail/MovieDetail';
 
 
 function App() {
