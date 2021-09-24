@@ -9,6 +9,8 @@ import PageNotFound from './containers/shared/PageNotFound/PageNotFound';
 import Header from './components/Header/Header';
 import Footer from 'components/Footer/Footer';
 import MovieDetail from 'containers/client/MovieDetail/MovieDetail';
+import SeatPlan from 'containers/client/SeatPlan/SeatPlan';
+import Login from 'containers/client/Login/Login';
 
 
 function App() {
@@ -22,6 +24,8 @@ function App() {
           <Route path="/review" component={Review} />
           <Route path="/about" component={About} />
           <Route path="/movie-detail/:movieId" component={MovieDetail} />
+          <Route path="/seat-plan/:showTimeId" component={SeatPlan} />
+          <Route path="/login" component={Login} />
           <Route path="*" component={PageNotFound} />
         </Switch>
         <Footer />

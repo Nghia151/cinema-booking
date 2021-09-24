@@ -1,5 +1,5 @@
-import bannerApi from 'apis/bannerApi';
-import movieApi from 'apis/movieApi';
+import {bannerApi} from 'apis/bannerApi'
+import {movieApi} from 'apis/movieApi';
 import {
     FETCH_ALL_BANNER_SUCCESS, FETCH_ALL_BANNER_FAILED, FETCH_ALL_MOVIE_FAILED, FETCH_ALL_MOVIE_SUCCESS, START_LOADING, STOP_LOADING,
 } from './types'

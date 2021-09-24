@@ -71,7 +71,9 @@ export default class Header extends Component {
 
           <div className="navbar-nav d-none d-md-block ml-auto">
             <div className="nav-item">
-              <a href="#" className="nav-link user-action"><img src="./avatar.png" className="avatar" alt="Avatar" /> Đăng nhập</a>
+              <Link to="/login">
+              <p  className="nav-link user-action"><img src="./avatar.png" className="avatar" alt="Avatar" /> Đăng nhập</p>
+              </Link>
             </div>
           </div>
         </div>

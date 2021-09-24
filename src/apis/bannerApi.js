@@ -1,9 +1,9 @@
 
 import callApi from "utils/callApi";
 
-const bannerApi = {
+class BannerApi extends callApi {
     fecthAllBannerApi(){
-        return callApi('QuanLyPhim/LayDanhSachBanner')
+        return this.getApi('QuanLyPhim/LayDanhSachBanner')
     }
 }
-export default bannerApi;
+export const bannerApi = new BannerApi();
