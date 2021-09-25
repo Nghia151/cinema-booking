@@ -30,7 +30,7 @@ class MovieList extends Component {
                                             <h4 className="card-title text-left"> {movie.tenPhim} </h4>
                                             <p className="card-text text-left"> {movie.moTa} </p>
                                             <Link className="btn btn-success w-100" to={`/movie-detail/${movie.maPhim}`} >
-                                                View detail
+                                                Chi tiết
                                             </Link>
                                         </div>
                                     </div>
