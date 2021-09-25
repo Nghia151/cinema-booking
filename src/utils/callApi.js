@@ -1,19 +1,26 @@
 import axios from 'axios';
-import { BASE_URL } from 'settings/apiConfig';
+import { BASE_URL, ACCESS_TOKEN } from 'settings/apiConfig';
 
 class callApi {
-    getApi = (endpoint) => {
+  getApi = (endpoint) => {
     return axios({
       url: `${BASE_URL}/${endpoint}`,
-      method:'GET',
-      
+      method: 'GET',
+      headers: {
+        'Authorization': 'Bearer ' + ACCESS_TOKEN
+
+      }
     });
   }
-  postApi =(endpoint, data = null) =>{
+  postApi = (endpoint, data = null) => {
     return axios({
       url: `${BASE_URL}/${endpoint}`,
       method: 'POST',
       data,
+      headers: {
+        'Authorization': 'Bearer ' + ACCESS_TOKEN
+
+      }
     })
   }
 }

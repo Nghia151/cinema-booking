@@ -97,6 +97,31 @@ Header {
 		&:last-of-type {
 			margin-right: 0px;
 		}
+		.items-center{
+			img{
+				border-radius: 50%;
+			}
+			.dropdown{
+				margin: auto 5px;
+				align-items: center;
+				transition: all .5s;
+				&:hover{
+					color: $color-organge;
+
+				}
+				.dropdown-menu{
+					margin-top: 20px 10px 0 0;
+					background-color: rgba(0, 0, 0, 0.776);
+					.dropdown-item{
+						color: #fff;
+						&:hover{
+							color: $color-organge;
+							background: rgba(0, 0, 0, 0.776);
+						}
+					}
+				}
+			}
+		}
 		.active {
 			color: $color-organge;
 		}
@@ -107,7 +132,6 @@ Header {
 			}
 		}
 	}
-
 	.navbar-collapse {
 		.navbar-nav {
 			margin-right: auto;
@@ -146,98 +170,3 @@ Header {
 		margin-right: 7px;
 	}
 }
-
-// #navbarCollapse {
-// 	position: absolute;
-// 	top: 0;
-// 	left: 0;
-// 	width: 100%;
-// 	height: 100%;
-// 	background-color: rgba($color: #000000, $alpha: 0);
-
-// 	// z-index: 0;
-// 	transition: all 0.4s;
-
-// 	#sideNav {
-// 		width: 0%;
-// 		height: 100%;
-// 		background-color: white;
-// 		position: absolute;
-// 		top: 0;
-// 		right: 0;
-
-// 		transition: all 0.4s;
-// 		overflow-y: scroll;
-// 		overflow-x: visible;
-
-// 		button {
-// 			position: absolute;
-// 			top: 20px;
-// 			right: 20px;
-
-// 			color: $color-gray-1;
-// 			background: none;
-// 			border: none;
-// 		}
-
-// 		.dropdown-menu {
-// 			height: 100px;
-// 			top: 100% !important;
-// 			left: 50% !important;
-// 			transform: translateX(-50%) !important;
-// 			overflow-y: scroll;
-// 		}
-
-// 		.nav-link {
-// 			color: $color-black-0;
-// 			padding: 20px;
-// 			font-size: 18px;
-// 			height: 60px;
-// 			border: none;
-
-// 			&:focus {
-// 				outline: none;
-// 			}
-// 		}
-
-// 		.signIn {
-// 			height: 35px;
-// 			line-height: 35px;
-
-// 			padding: 0;
-// 			margin: 10px 20px;
-// 			font-size: 14px;
-// 		}
-// 	}
-// }
-
-// #navModal {
-// 	height: 90%;
-
-// 	position: absolute;
-// 	top: 50%;
-// 	left: 50%;
-// 	transform: translate(-50%, -50%);
-
-// 	.modal-dialog {
-// 		background-color: white;
-// 	}
-
-// 	.modal-body {
-// 		height: 100%;
-// 		margin: 20px 0;
-// 		overflow-y: scroll;
-// 		padding: 0 30px;
-
-// 		p {
-// 			margin-bottom: 0.5rem;
-// 			padding-bottom: 0.5rem;
-// 			border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
-// 		}
-// 	}
-
-// 	.modal-content {
-// 		height: inherit;
-// 		overflow-y: scroll;
-// 	}
-// }

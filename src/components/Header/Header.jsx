@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import './Header.scss'
 
 export default class Header extends Component {
+  state = {
+    hoTen: "TranNghia"
+  }
   render() {
     return (
 
@@ -22,9 +25,10 @@ export default class Header extends Component {
           </div>
         </div> */}
         <div className="navbar">
-          <a href="#" className="navbar-brand d-flex"><img src="./img/logo.png" />
+          <Link to="/" className="navbar-brand d-flex">
+            <img src="./img/logo.png" />
             <h3 className="ml-2">MOON</h3>
-          </a>
+          </Link>
           <button
             className="navbar-toggler d-lg-none"
             type="button"
@@ -40,7 +44,7 @@ export default class Header extends Component {
             <ul className="navbar-nav  ml-auto mt-2 mt-md-0">
               <li className="nav-item d-md-none d-block">
                 <Link className="nav-link user-action " to="/logIn">
-                  <img src="./avatar.png" className="avatar" alt="Avatar" />
+                  <img src="./img/ava.jpg" className="avatar" alt="Avatar" />
                   Đăng nhập
 
                 </Link>
@@ -71,13 +75,29 @@ export default class Header extends Component {
 
           <div className="navbar-nav d-none d-md-block ml-auto">
             <div className="nav-item">
-              <Link to="/login">
-              <p  className="nav-link user-action"><img src="./avatar.png" className="avatar" alt="Avatar" /> Đăng nhập</p>
-              </Link>
+              {/* <Link to="/login"> */}
+              <div className="items-center d-flex">
+                <img src="./img/ava.jpg" alt="anvatar" width="45px" height="45px"  />
+                <div className="dropdown">
+                  <span className=" dropdown-toggle bg-transparent border-transparent mt-5" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {this.state.hoTen}
+                  </span>
+                  <div className="dropdown-menu " aria-labelledby="dropdownMenuLink" >
+                    <Link className="dropdown-item " to="/info">Profile</Link>
+                    <Link className="dropdown-item " to="/" >Log out</Link>
+                  </div>
+                </div>
+              </div>
+              {/* : <div className="items-center flex-shrink-0 lg:flex" onClick={() => {
+                    history.push('/login') */}
+
+              {/* <i className="fa fa-user-circle text-5xl text-gray-500 hover:text-white cursor-pointer"></i>
+                    <button className="self-center text-center py-2 px-4 text-white">Sign in</button> */}
             </div>
+            {/* </Link> */}
           </div>
         </div>
-      </div>
+        </div>
 
 
 
@@ -88,6 +108,6 @@ export default class Header extends Component {
 
 
 
-    );
+        );
   }
 }

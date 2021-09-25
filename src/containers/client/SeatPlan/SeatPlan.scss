@@ -7,8 +7,9 @@
     
     .screen{
        margin-left: 58px;
+       color: #fff;
         width: 80%;
-        background: rgba(65, 64, 64, 0.525);
+        background: rgb(9, 9, 9);
         height: 25px;
         box-shadow:3px 26px 44px 14px rgb(53, 52, 52);
     }
@@ -57,5 +58,10 @@
     }
     .gheVip{
         background-color: rgb(231, 177, 0);
+    }
+    .gheDaDuocDat{
+        background-color: rgb(18, 2, 236);
+        border: 1px solid rgb(13, 202, 3);
+        color: #fff;
     }
 }

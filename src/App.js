@@ -4,14 +4,16 @@ import Home from './containers/client/Home/Home';
 import Theater from './containers/client/Theater/Theater';
 import Review from './containers/client/Review/Review';
 import About from './containers/client/About/About';
-
+import { createBrowserHistory } from 'history';
 import PageNotFound from './containers/shared/PageNotFound/PageNotFound';
 import Header from './components/Header/Header';
 import Footer from 'components/Footer/Footer';
 import MovieDetail from 'containers/client/MovieDetail/MovieDetail';
 import SeatPlan from 'containers/client/SeatPlan/SeatPlan';
-import Login from 'containers/client/Login/Login';
+import Info from 'containers/client/Infomation/Info';
+// import Login from 'containers/client/Login/Login';
 
+export const history = createBrowserHistory()
 
 function App() {
   return (
@@ -25,7 +27,8 @@ function App() {
           <Route path="/about" component={About} />
           <Route path="/movie-detail/:movieId" component={MovieDetail} />
           <Route path="/seat-plan/:showTimeId" component={SeatPlan} />
-          <Route path="/login" component={Login} />
+          {/* <Route path="/login" component={Login} /> */}
+          <Route path ="/info" component={Info} />
           <Route path="*" component={PageNotFound} />
         </Switch>
         <Footer />

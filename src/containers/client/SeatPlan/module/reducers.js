@@ -3,7 +3,8 @@ import {
     FETCH_ALL_SEAT_PLAN_REQUETS,
     FETCH_ALL_SEAT_PLAN_SUCCESS,
     FETCH_ALL_SEAT_PLAN_FAILD,
-    DAT_GHE
+    DAT_GHE,
+    DAT_VE
 } from './types'
 
 
@@ -13,6 +14,7 @@ const initialState = {
         
      },
      danhSachGheDangDat : [],
+     thongTinDatVe: {},
     error: ''
 }
 
@@ -40,6 +42,11 @@ const quanLyDatVeReducer = (state= initialState, {type, payload})=>{
                 danhSachGheCapNhap.push(payload);
             }
             return{...state, danhSachGheDangDat:danhSachGheCapNhap}
+        }
+        case DAT_VE:{
+            console.log(payload);
+            state.thongTinDatVe=payload;
+            return {...state}
         }
         default:
             return state;
