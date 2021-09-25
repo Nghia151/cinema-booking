@@ -1,4 +1,4 @@
-import movieApi from 'apis/movieApi';
+import {movieApi} from 'apis/movieApi';
 import {
   FETCH_MOVIE_DETAIL_FAILED,
   FETCH_MOVIE_DETAIL_SUCCESS,

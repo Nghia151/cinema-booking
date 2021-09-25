@@ -78,7 +78,7 @@ export default class Footer extends Component {
                     {/* Footer links */}
                     <hr className="hrFooter mt-md-0" />
                     {/* Grid row */}
-                    <div className="info row">
+                    <div className=" row">
                         <div className="footer-detail ml-md-3 col-12 col-md text-center text-lg-left">
                             <div>
                             <h6>Copyright © 2020.All Rights Reserved By Moon</h6>

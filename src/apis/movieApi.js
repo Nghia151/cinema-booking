@@ -1,14 +1,14 @@
 import { GROUP_ID } from "settings/apiConfig";
 import callApi from "utils/callApi";
 
-const movieApi = {
+class MovieApi extends callApi {
     fecthAllMovieApi() {
-        return callApi(`QuanLyPhim/LayDanhSachPhim?maNhom=${GROUP_ID}`);
-    },
+        return this.getApi(`QuanLyPhim/LayDanhSachPhim?maNhom=${GROUP_ID}`);
+    }
 
     fetchMovieDetailApi(movieId) {
-        return callApi(`QuanLyRap/LayThongTinLichChieuPhim?MaPhim=${movieId}`);
+        return this.getApi(`QuanLyRap/LayThongTinLichChieuPhim?MaPhim=${movieId}`);
     }
 }
 
-export default movieApi;
+export const movieApi = new MovieApi();
